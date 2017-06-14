@@ -12,7 +12,7 @@ Version: 1.0
 Author URI: https://qhaensler.com/
 */
 
-function hello_dolly_get_lyric() {
+function hello_get_lyric() {
 	$lyrics = "Ma frappe y'a personne qui l’arrête
 Penalty j'souris au gardien
 Igo y'a Mowgli dans l’arène
@@ -86,16 +86,16 @@ Faire rampampampa";
 }
 
 // This just echoes the chosen line, we'll position it later
-function hello_dolly() {
-	$chosen = hello_dolly_get_lyric();
+function hello_wordpress() {
+	$chosen = hello_get_lyric();
 	echo "<p id='dolly'>$chosen</p>";
 }
 
 // Now we set that function up to execute when the admin_notices action is called
-add_action( 'admin_notices', 'hello_dolly' );
+add_action( 'admin_notices', 'hello_wordpress' );
 
 // We need some CSS to position the paragraph
-function dolly_css() {
+function hello_css() {
 	// This makes sure that the positioning is also good for right-to-left languages
 	$x = is_rtl() ? 'left' : 'right';
 
@@ -112,6 +112,6 @@ function dolly_css() {
 	";
 }
 
-add_action( 'admin_head', 'dolly_css' );
+add_action( 'admin_head', 'hello_css' );
 
 ?>
