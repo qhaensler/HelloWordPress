@@ -1,7 +1,7 @@
 <?php
 /**
  * @package Hello_PNL
- * @version 1.6
+ * @version 1.0
  */
 /*
 Plugin Name: Hello PNL
@@ -88,7 +88,7 @@ Faire rampampampa";
 // This just echoes the chosen line, we'll position it later
 function hello_wordpress() {
 	$chosen = hello_get_lyric();
-	echo "<p id='dolly'>$chosen</p>";
+	echo "<p id='helloWordPress'>$chosen</p>";
 }
 
 // Now we set that function up to execute when the admin_notices action is called
@@ -101,12 +101,12 @@ function hello_css() {
 
 	echo "
 	<style type='text/css'>
-	#dolly {
+	#helloWordPress {
 		float: $x;
 		padding-$x: 15px;
 		padding-top: 5px;		
 		margin: 0;
-		font-size: 11px;
+		font-size: 12px;
 	}
 	</style>
 	";
